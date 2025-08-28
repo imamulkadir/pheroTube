@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Tube</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="w-11/12 py-4 mx-auto flex justify-between items-center border-b-2 border-gray-400"
+      >
+        <div class="logo">
+          <img class="w-[100px]" src="./assets/Logo.png" alt="" />
+        </div>
+        <div class="search">
+          <label class="input">
+            <input
+              id="search-input"
+              type="search"
+              class="grow"
+              placeholder="Search"
+            />
+            <svg
+              class="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+          </label>
+        </div>
+        <div class="sort">
+          <button onclick="sortVideosByViews()" class="btn">SORT</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Categories -->
+      <div
+        id="categories"
+        class="max-w-60 mx-auto flex gap-6 justify-around my-4"
+      ></div>
+      <section
+        id="videos-container"
+        id="videos"
+        class="w-11/12 mx-auto grid grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-4 gap-5"
+      ></section>
+
+      <!-- <div
+        id="videos-container"
+        class="w-11/12 my-4 mx-auto grid grid-cols-4 items-center place-items-center gap-6"
+      >
+        <div>
+          <img src="https://i.ibb.co/L1b6xSq/shape.jpg" alt="" />
+          <div>
+            <img src="https://i.ibb.co/D9wWRM6/olivia.jpg" alt="" />
+            <h1>Olivia Mitchell <span>✔️</span></h1>
+            <p>100K views</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://i.ibb.co/L1b6xSq/shape.jpg" alt="" />
+          <div>
+            <img src="https://i.ibb.co/D9wWRM6/olivia.jpg" alt="" />
+            <h1>Olivia Mitchell <span>✔️</span></h1>
+            <p>100K views</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://i.ibb.co/L1b6xSq/shape.jpg" alt="" />
+          <div>
+            <img src="https://i.ibb.co/D9wWRM6/olivia.jpg" alt="" />
+            <h1>Olivia Mitchell <span>✔️</span></h1>
+            <p>100K views</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://i.ibb.co/L1b6xSq/shape.jpg" alt="" />
+          <div>
+            <img src="https://i.ibb.co/D9wWRM6/olivia.jpg" alt="" />
+            <h1>Olivia Mitchell <span>✔️</span></h1>
+            <p>100K views</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://i.ibb.co/L1b6xSq/shape.jpg" alt="" />
+          <div>
+            <img src="https://i.ibb.co/D9wWRM6/olivia.jpg" alt="" />
+            <h1>Olivia Mitchell <span>✔️</span></h1>
+            <p>100K views</p>
+          </div>
+        </div>
+      </div> -->
+    </main>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn hidden" onclick="customModal.showModal()">
+      open modal
+    </button>
+    <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modal-content">
+          <!-- will show the video details here -->
+        </div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <footer></footer>
+    <script src="./script/video.js"></script>
+  </body>
+</html>
